@@ -16,16 +16,6 @@ using System.Web.Http;
 namespace SecureWeb.Controllers {
     public class ImageController :BaseApiController {
 
-        public ImageController() {
-            ImageModel img = new ImageModel();
-            img.Url = "http://catthoughtalog.tumblr.com/image/17235419661";
-            ImageModel img2 = new ImageModel();
-            img2.Url = "http://catthoughtalog.tumblr.com/image/17235419661";
-            _repository.Save<ImageModel>(img);
-            _repository.Save<ImageModel>(img2);
-            _repository.Save<ImageModel>(img);
-
-        }
         public void Post(string id) {
             //var result = new HttpResponseMessage(HttpStatusCode.OK);
             String fullPath="";
