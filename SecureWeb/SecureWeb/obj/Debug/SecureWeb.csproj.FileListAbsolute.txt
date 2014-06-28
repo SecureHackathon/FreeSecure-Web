@@ -31,6 +31,6 @@ C:\Projects\FreeSecure-Web\SecureWeb\SecureWeb\bin\System.Web.Razor.xml
 C:\Projects\FreeSecure-Web\SecureWeb\SecureWeb\bin\System.Web.WebPages.xml
 C:\Projects\FreeSecure-Web\SecureWeb\SecureWeb\bin\System.Web.WebPages.Deployment.xml
 C:\Projects\FreeSecure-Web\SecureWeb\SecureWeb\bin\System.Web.WebPages.Razor.xml
-C:\Projects\FreeSecure-Web\SecureWeb\SecureWeb\obj\Debug\SecureWeb.csprojResolveAssemblyReference.cache
 C:\Projects\FreeSecure-Web\SecureWeb\SecureWeb\obj\Debug\SecureWeb.dll
 C:\Projects\FreeSecure-Web\SecureWeb\SecureWeb\obj\Debug\SecureWeb.pdb
+C:\Projects\FreeSecure-Web\SecureWeb\SecureWeb\obj\Debug\SecureWeb.csprojResolveAssemblyReference.cache
