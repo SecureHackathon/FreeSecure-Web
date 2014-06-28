@@ -38,6 +38,10 @@ namespace SecureWeb.Controllers
         public IEnumerable<Camera> Get() {
             return _repository.GetAll<Camera>();
         }
+
+        public void Post() {
+
+        }
         
     }
 }
