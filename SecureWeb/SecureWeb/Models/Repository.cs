@@ -53,6 +53,17 @@ namespace SecureWeb.Models {
             return true;
         }
 
+        public bool Update<T>( T document ) where T : BaseModel {
+            
+            try {
+                _session.Store(document, document.Id);    
+                _session.SaveChanges();
+            } catch {
+                return false;
+            }
+            return true;
+        }
+
         public void Dispose() {
             if ( _documentStore != null ) {
                 _documentStore.Dispose();
