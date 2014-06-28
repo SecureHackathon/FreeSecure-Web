@@ -18,6 +18,7 @@ namespace SecureWeb.Controllers {
 
         public void Post(string id) {
             var result = new HttpResponseMessage(HttpStatusCode.OK);
+            String fullPath="";
             if ( Request.Content.IsMimeMultipartContent() ) {
                 Request.Content.ReadAsMultipartAsync<MultipartMemoryStreamProvider>(new MultipartMemoryStreamProvider()).ContinueWith(( task ) => {
                     MultipartMemoryStreamProvider provider = task.Result;
@@ -27,17 +28,17 @@ namespace SecureWeb.Controllers {
                         var testName = content.Headers.ContentDisposition.Name;
                         String filePath = HostingEnvironment.MapPath("~/Images/");
                         String fileName = id + ".jpg";
-                        String fullPath = Path.Combine(filePath, fileName);
+                        fullPath = Path.Combine(filePath, fileName);
                         image.Save(fullPath);
-                        ImageModel img = new ImageModel();
-                        img.Url = fullPath;
-                        _repository.Save<ImageModel>(img);
+                        
                     }
                 });
+                ImageModel img = new ImageModel();
+                img.Url = fullPath;
+                _repository.Save<ImageModel>(img);
+
             }   
         }
-
-
 
         public IEnumerable<ImageModel> Get() {
 
