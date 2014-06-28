@@ -41,7 +41,9 @@ namespace SecureWeb.Controllers {
                 await Request.Content.ReadAsMultipartAsync(provider); 
                 foreach (MultipartFileData file in provider.FileData) { 
                     files.Add(Path.GetFileName(file.LocalFileName)); 
-                } 
+                }
+                ImageModel model = new ImageModel { Url = files[0], DateCreated = DateTime.Now };
+                _repository.Save<ImageModel>(model); 
                 // Send OK Response along with saved file names to the client. 
                 return Request.CreateResponse(HttpStatusCode.OK, files); 
             } catch (System.Exception e) { 
