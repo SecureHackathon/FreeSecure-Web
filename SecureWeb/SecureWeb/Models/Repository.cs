@@ -19,6 +19,7 @@ namespace SecureWeb.Models {
         public void InitializeDocumentStore() {
             if ( _documentStore == null || _documentStore.WasDisposed ) {
                 _documentStore = new DocumentStore() { ConnectionStringName = "RavenDB" };
+                _documentStore.Conventions.IdentityPartsSeparator = "-";
                 _documentStore.Initialize();
                 _session = _documentStore.OpenSession();
             }
