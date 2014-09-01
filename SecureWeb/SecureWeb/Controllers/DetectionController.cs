@@ -11,11 +11,28 @@ namespace SecureWeb.Controllers
     public class DetectionController : BaseApiController
     {
 
-        public IEnumerable<Detection> Get() {
-            return _repository.GetAll<Detection>();
+        public HttpResponseMessage Get()
+        {
+            return Request.CreateResponse <IEnumerable<Detection>>(HttpStatusCode.OK, _repository.GetAll<Detection>());
         }
 
-        public void Post( [FromBody]string value ) {
+        public HttpResponseMessage Get(string id)
+        {
+            return Request.CreateResponse<Detection>(HttpStatusCode.OK, _repository.Get<Detection>(id));
+        }
+
+        public HttpResponseMessage Post(Detection detection)
+        {
+            if (_repository.Save<Detection>(detection))
+            {
+
+            }
+            return null;
+        }
+
+        public HttpResponseMessage Post(string value ) {
+            var queryvals = Request.RequestUri.ParseQueryString();
+            return Request.CreateResponse(HttpStatusCode.Accepted, queryvals);
         }
     }
 }

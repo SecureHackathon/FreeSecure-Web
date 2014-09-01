@@ -15,5 +15,6 @@ namespace SecureWeb.Controllers
         public BaseApiController() {
             _repository = new Repository();
         }
+
     }
 }

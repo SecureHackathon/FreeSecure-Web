@@ -30,11 +30,17 @@ namespace SecureWeb.Models {
         }
 
         public T Get<T>( string id ) where T :BaseModel {
-            return _session.Load<T>(id);
+            int value = -1;
+            if (int.TryParse(id, out value))
+            {
+                return _session.Load<T>(value);
+            }
+            return null;
         }
 
         public bool Save<T>( T document ) where T :BaseModel {
             try {
+                UpdateDate<T>(document);
                 _session.Store(document);
                 _session.SaveChanges();
             } catch {
@@ -57,6 +63,7 @@ namespace SecureWeb.Models {
         public bool Update<T>( T document ) where T : BaseModel {
             
             try {
+                Update<T>(document);
                 _session.Store(document, document.Id);    
                 _session.SaveChanges();
             } catch {
@@ -69,6 +76,17 @@ namespace SecureWeb.Models {
             if ( _documentStore != null ) {
                 _documentStore.Dispose();
             }
+        }
+
+        private void UpdateDate<T>(T model) where T : BaseModel
+        {
+            if (!IsNull<T>(model))
+                model.DateCreated = DateTime.Now;
+        }
+
+        private bool IsNull<T>(T model)
+        {
+            return model == null;
         }
     }
 }
