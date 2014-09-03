@@ -33,7 +33,6 @@ C:\Projects\FreeSecure-Web\SecureWeb\SecureWeb\bin\System.Web.WebPages.Deploymen
 C:\Projects\FreeSecure-Web\SecureWeb\SecureWeb\bin\System.Web.WebPages.Razor.xml
 C:\Projects\FreeSecure-Web\SecureWeb\SecureWeb\obj\Debug\SecureWeb.dll
 C:\Projects\FreeSecure-Web\SecureWeb\SecureWeb\obj\Debug\SecureWeb.pdb
-C:\Projects\FreeSecure-Web\SecureWeb\SecureWeb\obj\Debug\SecureWeb.csprojResolveAssemblyReference.cache
 C:\Users\Dev\Documents\Lebohang Temp\FreeSecure-Web\SecureWeb\SecureWeb\bin\SecureWeb.dll
 C:\Users\Dev\Documents\Lebohang Temp\FreeSecure-Web\SecureWeb\SecureWeb\bin\SecureWeb.pdb
 C:\Users\Dev\Documents\Lebohang Temp\FreeSecure-Web\SecureWeb\SecureWeb\bin\Antlr3.Runtime.dll
@@ -68,3 +67,5 @@ C:\Users\Dev\Documents\Lebohang Temp\FreeSecure-Web\SecureWeb\SecureWeb\bin\Syst
 C:\Users\Dev\Documents\Lebohang Temp\FreeSecure-Web\SecureWeb\SecureWeb\obj\Debug\SecureWeb.csprojResolveAssemblyReference.cache
 C:\Users\Dev\Documents\Lebohang Temp\FreeSecure-Web\SecureWeb\SecureWeb\obj\Debug\SecureWeb.dll
 C:\Users\Dev\Documents\Lebohang Temp\FreeSecure-Web\SecureWeb\SecureWeb\obj\Debug\SecureWeb.pdb
+C:\Projects\FreeSecure-Web\SecureWeb\SecureWeb\bin\SecureWeb.dll.config
+C:\Projects\FreeSecure-Web\SecureWeb\SecureWeb\obj\Debug\SecureWeb.csprojResolveAssemblyReference.cache
